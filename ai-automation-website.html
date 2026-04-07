@@ -1,0 +1,1010 @@
+<html lang="nl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation Architects | Zapier Automations voor Bedrijven</title>
+    <meta name="description" content="Wij bouwen automations. U groeit. Sneller. Slimmer. Sterker.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            cursor: pointer;
+        }
+
+        nav a {
+            color: #666;
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color: #0066cc;
+        }
+
+        .cta-nav {
+            background: #0066cc;
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: background 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .cta-nav:hover {
+            background: #0052a3;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+            line-height: 1.2;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #555;
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+            cursor: pointer;
+            border: none;
+        }
+
+        .hero-cta:hover {
+            background: #0052a3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 102, 204, 0.4);
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #0066cc;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #1a1a1a;
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .about-features {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .about-features li {
+            padding: 0.8rem 0;
+            color: #555;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-features li:before {
+            content: '✓';
+            color: #0066cc;
+            font-weight: bold;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            border-radius: 12px;
+            padding: 3rem;
+            text-align: center;
+            color: white;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-image .icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-image h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-image p {
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .problem-card {
+            background: #f9f9f9;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #0066cc;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .problem-card h3 {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .problem-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Solution Section */
+        .solution {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+        }
+
+        .solution-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .solution .section-title {
+            color: white;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .solution-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .solution-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .solution-card p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .benefit {
+            text-align: center;
+        }
+
+        .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 1rem;
+        }
+
+        .benefit h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .benefit p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 6rem 2rem;
+            background: #f5f7fa;
+        }
+
+        .process-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #0066cc;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: 0 auto 1rem;
+        }
+
+        .step h3 {
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        .step p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .step:not(:last-child)::after {
+            content: '→';
+            position: absolute;
+            right: -1.5rem;
+            top: 1.5rem;
+            font-size: 1.5rem;
+            color: #0066cc;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .pricing-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border-color: #0066cc;
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 82, 163, 0.05) 100%);
+            transform: scale(1.05);
+        }
+
+        .pricing-card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #0066cc;
+            margin: 1.5rem 0;
+        }
+
+        .price-period {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 0.7rem 0;
+            color: #666;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 0.95rem;
+        }
+
+        .pricing-features li:before {
+            content: '✓ ';
+            color: #0066cc;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .pricing-cta {
+            display: inline-block;
+            background: #0066cc;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            font-weight: 600;
+            transition: background 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .pricing-cta:hover {
+            background: #0052a3;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 2rem;
+            background: #f5f7fa;
+        }
+
+        .contact-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #0066cc;
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            background: #0066cc;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            width: 100%;
+        }
+
+        .form-submit:hover {
+            background: #0052a3;
+        }
+
+        .form-submit:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .form-message {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            text-align: center;
+            display: none;
+        }
+
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .final-cta-btn {
+            display: inline-block;
+            background: white;
+            color: #0066cc;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .final-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: #999;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            margin-top: 2rem;
+        }
+
+        .footer-links a {
+            color: #999;
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .footer-links a:hover {
+            color: #0066cc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+
+            .hero-stats {
+                gap: 2rem;
+            }
+
+            .step:not(:last-child)::after {
+                display: none;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo" onclick="scrollToSection('hero')">Automation Architects</div>
+        <div style="display: flex; align-items: center; gap: 2rem;">
+            <a onclick="scrollToSection('about')">Over</a>
+            <a onclick="scrollToSection('proces')">Proces</a>
+            <a onclick="scrollToSection('prijzen')">Prijzen</a>
+            <a onclick="scrollToSection('contact')" class="cta-nav">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <h1>Bespaar 10-15 Uur Per Week Met AI Automation</h1>
+        <p style="font-size: 1.2rem; color: #0066cc; font-weight: 600; margin-bottom: 1.5rem;">✦ Wij bouwen. U groeit. ✦</p>
+        <p>Laat repetitief werk automatiseren. Wij bouwen Zapier automations die direct resultaat opleveren.</p>
+        <button onclick="scrollToSection('contact')" class="hero-cta">Gratis Adviesgesprek</button>
+        
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number">1-2</div>
+                <div class="stat-label">Dagen implementatie</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">10-15</div>
+                <div class="stat-label">Uur bespaard/week</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">€2000</div>
+                <div class="stat-label">Eenmalige investering</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Over Mij</h2>
+                <p>Ik ben een gespecialiseerde Zapier automation expert. Ik help bedrijven hun workflows automatiseren en tijd besparen.</p>
+                <p>Met mijn diepgaande kennis van Zapier en automation best practices, bouw ik snelle, betrouwbare oplossingen die direct resultaat opleveren.</p>
+                <ul class="about-features">
+                    <li>Gespecialiseerd in Zapier automation</li>
+                    <li>Snelle implementatie (1-2 dagen)</li>
+                    <li>Professioneel onderhoud &amp; support</li>
+                    <li>Transparante prijzen</li>
+                    <li>Proven track record</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <div class="icon">🚀</div>
+                <h3>Snelle Resultaten</h3>
+                <p>Jouw automation gaat live in 1-2 dagen. Geen lange wachttijden, geen gedoe.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <h2 class="section-title">Wat Is Je Grootste Pijn?</h2>
+        <div class="problem-grid">
+            <div class="problem-card">
+                <h3>⏰ Verlies van Tijd</h3>
+                <p>Je team besteedt uren aan handmatig data invoeren, emails versturen, en orders verwerken. Dit kost je productiviteit.</p>
+            </div>
+            <div class="problem-card">
+                <h3>❌ Menselijke Fouten</h3>
+                <p>Handmatig werk leidt tot fouten. Verkeerde data, gemiste follow-ups, dubbele entries. Dit kost je geld.</p>
+            </div>
+            <div class="problem-card">
+                <h3>💸 Hoge Kosten</h3>
+                <p>Je moet extra personeel inhuren om alles af te handelen. Dit vreet je winst op.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="solution-content">
+            <h2 class="section-title">Onze Oplossing: AI Automation</h2>
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="icon">🤖</div>
+                    <h3>Intelligente Automation</h3>
+                    <p>Zapier automations die 24/7 werken. Geen handwerk meer. Alles gebeurt automatisch.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="icon">⚡</div>
+                    <h3>Snelle Implementatie</h3>
+                    <p>Wij bouwen en zetten alles live in 1-2 dagen. Geen lange wachttijden.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="icon">📊</div>
+                    <h3>Meetbare Resultaten</h3>
+                    <p>Je ziet direct hoeveel uren je bespaart. Transparante ROI.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="icon">🛡️</div>
+                    <h3>Betrouwbaar &amp; Veilig</h3>
+                    <p>Enterprise-grade automation. Je data is veilig. Alles werkt 99.9% van de tijd.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <h2 class="section-title">Wat Je Bereikt</h2>
+        <div class="benefits-grid">
+            <div class="benefit">
+                <div class="benefit-icon">⏱️</div>
+                <h3>10-15 Uur Bespaard</h3>
+                <p>Per week. Dat is 40-60 uur per maand. Meer tijd voor groeien.</p>
+            </div>
+            <div class="benefit">
+                <div class="benefit-icon">✅</div>
+                <h3>0 Fouten</h3>
+                <p>Geen menselijke fouten meer. Alles is consistent en accuraat.</p>
+            </div>
+            <div class="benefit">
+                <div class="benefit-icon">💰</div>
+                <h3>ROI in 1 Maand</h3>
+                <p>Je investering terug in 4 weken. Dan is het pure winst.</p>
+            </div>
+            <div class="benefit">
+                <div class="benefit-icon">🚀</div>
+                <h3>Schaal Makkelijker</h3>
+                <p>Groei zonder extra personeel. Automation groeit met je mee.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" id="proces">
+        <div class="process-content">
+            <h2 class="section-title">Hoe Het Werkt</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Adviesgesprek</h3>
+                    <p>We praten over je pijn. Wat wil je automatiseren? Ik analyseer je workflow.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Strategie</h3>
+                    <p>Met mijn Zapier expertise ontwerp ik de perfecte automation voor jou.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Snelle Implementatie</h3>
+                    <p>Dankzij mijn specialisatie in Zapier bouw ik alles in 1-2 dagen. Geen wachttijden.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Live &amp; Optimaal</h3>
+                    <p>Automation gaat live. Je team wordt getraind. Alles werkt perfect van dag 1.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="prijzen">
+        <h2 class="section-title">Transparante Prijzen</h2>
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <h3>Eenmalige Setup</h3>
+                <div class="price">€2.000</div>
+                <div class="price-period">Eenmalig</div>
+                <ul class="pricing-features">
+                    <li>1 Zapier Automation</li>
+                    <li>Volledige Setup</li>
+                    <li>Training Team</li>
+                    <li>30 Dagen Support</li>
+                </ul>
+                <button onclick="scrollToSection('contact')" class="pricing-cta">Aan De Slag</button>
+            </div>
+            <div class="pricing-card featured">
+                <h3>⭐ Populair</h3>
+                <h3>Maandelijks Onderhoud</h3>
+                <div class="price">€150</div>
+                <div class="price-period">Per maand</div>
+                <ul class="pricing-features">
+                    <li>Monitoring &amp; Support</li>
+                    <li>Updates &amp; Optimalisatie</li>
+                    <li>Performance Reports</li>
+                    <li>Prioriteit Support</li>
+                </ul>
+                <button onclick="scrollToSection('contact')" class="pricing-cta">Aan De Slag</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Meerdere Automations</h3>
+                <div class="price">€5.000</div>
+                <div class="price-period">Eenmalig</div>
+                <ul class="pricing-features">
+                    <li>3 Zapier Automations</li>
+                    <li>Volledige Setup</li>
+                    <li>Training Team</li>
+                    <li>60 Dagen Support</li>
+                </ul>
+                <button onclick="scrollToSection('contact')" class="pricing-cta">Aan De Slag</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <h2 class="section-title">Neem Contact Op</h2>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Naam *</label>
+                        <input type="text" id="name" name="name" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Bedrijfsnaam *</label>
+                        <input type="text" id="company" name="company" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Wat wil je automatiseren? *</label>
+                        <textarea id="message" name="message" required=""></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">📧 Verzenden</button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <h2>Klaar Om 10-15 Uur Per Week Te Besparen?</h2>
+        <p>Laten we een gratis adviesgesprek inplannen. Geen verplichtingen.</p>
+        <button onclick="scrollToSection('contact')" class="final-cta-btn">Neem Contact Op</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Automation Architects. Alle rechten voorbehouden.</p>
+        <div class="footer-links">
+            <a onclick="scrollToSection('about')">Over</a>
+            <a onclick="scrollToSection('contact')">Contact</a>
+            <a onclick="downloadWebsite()" style="cursor: pointer;">Download Website</a>
+        </div>
+    </footer>
+
+    <script>
+        // Download website function
+        function downloadWebsite() {
+            const htmlContent = document.documentElement.outerHTML;
+            const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'ai-automation-website.html';
+            link.click();
+        }
+
+        // Smooth scroll function
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Contact form handler
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const company = document.getElementById('company').value;
+            const message = document.getElementById('message').value;
+
+            // Create email body
+            const emailBody = `Naam: ${name}\nEmail: ${email}\nBedrijf: ${company}\n\nBericht:\n${message}`;
+
+            // Create mailto link
+            const mailtoLink = `mailto:boonenq@gmail.com?subject=NIEUW%20PROJECT%20AI-AUTOMATION&body=${encodeURIComponent(emailBody)}`;
+
+            // Open email client directly via link click (Safari compatible)
+            const link = document.createElement('a');
+            link.href = mailtoLink;
+            link.click();
+
+            // Show success message
+            const formMessage = document.getElementById('formMessage');
+            formMessage.textContent = '✓ Je email client wordt geopend. Verzend het bericht om contact op te nemen!';
+            formMessage.className = 'form-message success';
+
+            // Reset form after 3 seconds
+            setTimeout(() => {
+                document.getElementById('contactForm').reset();
+                formMessage.className = 'form-message';
+            }, 3000);
+        });
+    </script>
+
+
+</body></html>
